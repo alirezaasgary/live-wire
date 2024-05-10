@@ -16,4 +16,13 @@ enum ContactUsStatusEnum: int
             self::REJECT => trans('enum.status.reject'),
         };
     }
+
+    public function getColor(): string
+    {
+        return match ($this) {
+            self::WAITING => "text-warning",
+            self::APPROVE => "text-success",
+            self::REJECT => "text-danger",
+        };
+    }
 }

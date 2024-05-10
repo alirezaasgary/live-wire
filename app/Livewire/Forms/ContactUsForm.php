@@ -46,11 +46,12 @@ class ContactUsForm extends Form
             'message',
             'category'
         ]);
-        $formData['category'] = ContactUsCategoryEnum::from($formData['category'])->value;
+        $formData['category'] = $this->category;
         $formData['status'] = ContactUsStatusEnum::WAITING->value;
 
         ContactUs::query()->create($formData);
 
+        $this->resetValidation();
         $this->reset();
 
     }

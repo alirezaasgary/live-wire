@@ -18,8 +18,6 @@ class ContactUs extends Component
     {
         $this->form->store();
 
-//        session()->flash('saved', trans('general.messages.thank_you_for_contacting_us'));//todo for see session message uncomment this line
-
         $this->dispatch('success_alert', message: trans('general.messages.thank_you_for_contacting_us'));
 
     }

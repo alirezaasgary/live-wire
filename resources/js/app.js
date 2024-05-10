@@ -1,5 +1,6 @@
 import './bootstrap';
 import * as bootstrap from 'bootstrap';
+window.bootstrap = bootstrap;
 import toastr from 'toastr';
 window.toastr = toastr;
 
